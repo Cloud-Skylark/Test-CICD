@@ -4,55 +4,27 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git url: 'https://github.com/YOUR-USERNAME/YOUR-REPO.git', branch: 'main'
-                echo 'code successful'
+                git url: 'https://github.com/Cloud-Skylark/Test-CICD.git', branch: 'main'
+                echo 'Code cloned successfully'
             }
         }
         
         stage('Building') {
             steps {
-                echo 'code building'
+                echo 'Building the project...'
             }
         }
         
         stage('Testing') {
             steps {
-                echo 'code testing'
+                echo 'Running tests...'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'cp index.html /var/www/html/'
-            }
-        }
-    }
-}pipeline {
-    agent { label 'Try-Node' }
-
-    stages {
-        stage('Clone Code') {
-            steps {
-                git url: 'https://github.com/YOUR-USERNAME/YOUR-REPO.git', branch: 'main'
-                echo 'code successful'
-            }
-        }
-        
-        stage('Building') {
-            steps {
-                echo 'code building'
-            }
-        }
-        
-        stage('Testing') {
-            steps {
-                echo 'code testing'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh 'cp index.html /var/www/html/'
+                sh 'sudo cp index.html /var/www/html/'
+                echo 'Deployed to Apache Web Server'
             }
         }
     }
