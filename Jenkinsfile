@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/YOUR-USERNAME/YOUR-REPO.git'
+                git url: 'https://github.com/YOUR-USERNAME/YOUR-REPO.git', branch: 'main
                 echo 'code succefull'
             }
         }
