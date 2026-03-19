@@ -23,8 +23,8 @@ pipeline {
 
        stage('Deploy') {
             steps {
-                sh 'sudo cp index.html /var/www/html/'
-                echo 'Deployment successful to /var/www/html/'
+               sh 'cp index.html /var/www/html/'
+                echo 'Deployed successfully without sudo!'
             }
         }
     }
