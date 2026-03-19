@@ -21,10 +21,10 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+       stage('Deploy') {
             steps {
                 sh 'sudo cp index.html /var/www/html/'
-                echo 'Deployed to Apache Web Server'
+                echo 'Deployment successful to /var/www/html/'
             }
         }
     }
