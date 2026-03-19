@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue; /* Change this color in GitHub to see effect */
+  text-align: center;
+}
+
+h1 {
+  color: darkblue;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
